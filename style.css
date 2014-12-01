@@ -6,7 +6,7 @@ body {
 
 header {
     position: fixed;
-    font-family: 'Vollkorn', sans-serif;
-    font-weight: bold;
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
     font-size: 1em;
 }
