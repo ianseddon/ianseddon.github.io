@@ -1,0 +1,12 @@
+body {
+    color: #555566;
+    background: #FFFFFF;
+    font-family: sans-serif;
+}
+
+header {
+    position: fixed;
+    font-family: 'Vollkorn', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+}
