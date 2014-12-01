@@ -15,18 +15,41 @@ header {
     color: #FFF;
 }
 
-section {
-    height: 50em;
+header img {
+    max-height: 40px;
 }
 
-section.s1 {
+div.s1, div.s2, div.s3 {
+    min-height: 30em;
+}
+
+div.s1 {
     background: #FFFFFF;
 }
 
-section.s2 {
+div.s2 {
     background: #4F5361;
 }
 
-section.s3 {
+div.s3 {
     background: #2E3038;
+}
+
+div.greeting {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    text-transform: lowercase;
+    font-size: 10em;
+    text-align: right;
+}
+
+button {
+    border: 3px solid #171922;
+    border-radius: 1.5em;
+    background: none;
+    padding: 10px 20px;
+    text-transform: lowercase;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
 }
