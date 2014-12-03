@@ -111,14 +111,16 @@
         <div ng-app="myApp">
         <div ng-controller="PlayersCtrl">
 	<div class="col-md-4" ng-repeat="person in people">
-	    <div class="row">
-	        <div class="pull-left">{{person.name}}</div>
-	        <div class="pull-right score" ng-style="{'background': scoreColor($index)}">{{totalScore($index)}}</div>
+	<div class="table-wrapper">
+	    <div class="header row">
+	        <div class="name pull-left">{{person.name}}</div>
+	        <div class="points pull-right" ng-style="{'background': scoreColor($index)}">{{totalScore($index)}}</div>
 	    </div>
-	    <div class="row" ng-repeat="pick in person.picks">
-	        <div class="pull-left name">{{players[pick].name}}</div>
-	        <div class="pull-right">{{players[pick].points}}</div>
+	    <div class="data row" ng-repeat="pick in person.picks">
+	        <div class="name pull-left">{{players[pick].name}}</div>
+	        <div class="points pull-right">{{players[pick].points}}</div>
 	    </div>
+	</div>
 	</div>
 	</div>
       </div>
