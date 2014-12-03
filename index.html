@@ -53,14 +53,14 @@
                     <div class="clearfix"></div>
                     
                     <div class="row row2">
-                        <h1>Standings</h1>
+                        <h3>Standings</h3>
                         <div class="col-md-12">
                             <div class="header clearfix">
                                 <div class="name pull-left">Name</div>
                                 <div class="points pull-right">Points</div>
                             </div>
                             <div class="data clearfix" ng-repeat=
-                                "player in players | orderBy:player.points">
+                                "player in players | orderBy:'points':true">
                                 <div class="name pull-left">
                                     {{player.name}}
                                 </div>
