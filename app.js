@@ -38,14 +38,13 @@ var app = angular.module('myApp', []);
 	            if( i == pId ) myScore = $scope.totalScore(i);
 	        }
 	        
-	        $scope.pointSort = function( pick ) {
-	            console.log( pick );
-	            return 0;//return $scope.players[pick].points;
-	        };
-	        
 	        var x = (myScore - minScore) / (maxScore - minScore);
 	        return 'rgb( '+Math.round(225*(1-x))+', '+Math.round(225*x)+', 0 )';
 	    }
+	    
+	    $scope.pointSort = function( pick ) {
+	    	return $scope.players[pick].points;
+	    };
 	         
 	    $scope.loadPlayers = function() {
 	        
