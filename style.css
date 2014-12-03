@@ -26,10 +26,6 @@ span {
     font-size: 25px;
 }
 
-div.s1, div.s2, div.s3 {
-    min-height: 30em;
-}
-
 div.s1 {
     background: #FFFFFF;
 }
@@ -37,10 +33,13 @@ div.s1 {
 div.s2 {
     background: #3D3F52;
     color: #FFFFFF;
+    padding-bottom: 2em;
 }
 
 div.s3 {
     background: #2E3038;
+    padding: 2em;
+    color: #DDDDDD;
 }
 
 div.greeting {
