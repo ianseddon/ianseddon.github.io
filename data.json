@@ -1,51 +1,51 @@
 [
     {
         "name": "Shahar Shenhar",
-        "points": 15
-    },
-    {
-        "name": "Patrick Chapin",
         "points": 21
     },
     {
+        "name": "Patrick Chapin",
+        "points": 24
+    },
+    {
         "name": "Stanislav Cifka",
-        "points": 9
-    },
-    {
-        "name": "Lars Dam",
-        "points": 12
-    },
-    {
-        "name": "Jeremy Dezani",
-        "points": 6
-    },
-    {
-        "name": "Reid Duke",
-        "points": 6
-    },
-    {
-        "name": "Willy Edel",
-        "points": 9
-    },
-    {
-        "name": "Ivan Floch",
         "points": 15
     },
     {
-        "name": "Yuuki Ichikawa",
+        "name": "Lars Dam",
+        "points": 15
+    },
+    {
+        "name": "Jeremy Dezani",
         "points": 12
+    },
+    {
+        "name": "Reid Duke",
+        "points": 9
+    },
+    {
+        "name": "Willy Edel",
+        "points": 12
+    },
+    {
+        "name": "Ivan Floch",
+        "points": 18
+    },
+    {
+        "name": "Yuuki Ichikawa",
+        "points": 18
     },
     {
         "name": "William Jensen",
-        "points": 12
+        "points": 18
     },
     {
         "name": "Lee Shi Tian",
-        "points": 3
+        "points": 9
     },
     {
         "name": "Raphael Levy",
-        "points": 9
+        "points": 15
     },
     {
         "name": "Tom Martell",
@@ -53,11 +53,11 @@
     },
     {
         "name": "Shaun McLaren",
-        "points": 9
+        "points": 15
     },
     {
         "name": "Nam Sung Wook",
-        "points": 6
+        "points": 9
     },
     {
         "name": "Raymond Perez Jr.",
@@ -65,27 +65,27 @@
     },
     {
         "name": "Paulo Vitor Damo da Rosa",
-        "points": 9
+        "points": 12
     },
     {
         "name": "Paul Rietzl",
-        "points": 9
+        "points": 12
     },
     {
         "name": "Sam Black",
-        "points": 12
+        "points": 18
     },
     {
         "name": "Owen Turtenwald",
-        "points": 12
+        "points": 15
     },
     {
         "name": "Yuuya Watanabe",
-        "points": 12
+        "points": 21
     },
     {
         "name": "Jacob Wilson",
-        "points": 6
+        "points": 15
     },
     {
         "name": "Josh Utter-Leyton",
@@ -93,6 +93,6 @@
     },
     {
         "name": "Kentarou Yamamoto",
-        "points": 15
+        "points": 24
     }
 ]
