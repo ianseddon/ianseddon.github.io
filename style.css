@@ -68,9 +68,14 @@ MTG Specific
 .header {
     font-weight: bold;
     font-size: 1.25em;
-    background: #171922;
+    background: #2E3038;
     color: #FFFFFF;
     margin-bottom: 0.2em;
+}
+
+.s2 .header {
+    color: #171922;
+    background: #FFFFFF;
 }
 
 .header div {
@@ -80,6 +85,10 @@ MTG Specific
 .data {
     padding: 0.1em 0.75em;
     color: #555555;
+}
+
+.s2 .data {
+    color: #CCCCCC;
 }
 
 .table-wrapper {
