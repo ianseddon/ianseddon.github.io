@@ -39,7 +39,8 @@ var app = angular.module('myApp', []);
 	        }
 	        
 	        $scope.pointSort = function( pick ) {
-	            return $scope.players[pick].points;
+	            console.log( pick );
+	            return 0;//return $scope.players[pick].points;
 	        };
 	        
 	        var x = (myScore - minScore) / (maxScore - minScore);
