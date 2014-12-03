@@ -113,7 +113,7 @@
 	<div class="col-md-4" ng-repeat="person in people">
 	    <div class="row">
 	        <div class="pull-left">{{person.name}}</div>
-	        <div class="pull-rightscore" ng-style="{'background': scoreColor($index)}">{{totalScore($index)}}</div>
+	        <div class="pull-right score" ng-style="{'background': scoreColor($index)}">{{totalScore($index)}}</div>
 	    </div>
 	    <div class="row" ng-repeat="pick in person.picks">
 	        <div class="pull-left name">{{players[pick].name}}</div>
