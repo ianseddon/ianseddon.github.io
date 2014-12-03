@@ -117,7 +117,7 @@
 	        <div class="name pull-left">{{person.name}}</div>
 	        <div class="points pull-right" ng-style="{'background': scoreColor($index)}">{{totalScore($index)}}</div>
 	    </div>
-	    <div class="data clearfix" ng-repeat="pick in person.picks">
+	    <div class="data clearfix" ng-repeat="pick in person.picks" ng-class-even="'even'" ng-class-odd="'odd'">
 	        <div class="name pull-left">{{players[pick].name}}</div>
 	        <div class="points pull-right">{{players[pick].points}}</div>
 	    </div>
