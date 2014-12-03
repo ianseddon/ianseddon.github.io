@@ -1,7 +1,7 @@
 [
     {
         "name": "Shahar Shenhar",
-        "points": 21
+        "points": 24
     },
     {
         "name": "Patrick Chapin",
@@ -21,7 +21,7 @@
     },
     {
         "name": "Reid Duke",
-        "points": 12
+        "points": 15
     },
     {
         "name": "Willy Edel",
@@ -33,7 +33,7 @@
     },
     {
         "name": "Yuuki Ichikawa",
-        "points": 18
+        "points": 21
     },
     {
         "name": "William Jensen",
@@ -49,19 +49,19 @@
     },
     {
         "name": "Tom Martell",
-        "points": 12
+        "points": 15
     },
     {
         "name": "Shaun McLaren",
-        "points": 18
+        "points": 21
     },
     {
         "name": "Nam Sung Wook",
-        "points": 9
+        "points": 12
     },
     {
         "name": "Raymond Perez Jr.",
-        "points": 9
+        "points": 12
     },
     {
         "name": "Paulo Vitor Damo da Rosa",
@@ -69,7 +69,7 @@
     },
     {
         "name": "Paul Rietzl",
-        "points": 15
+        "points": 18
     },
     {
         "name": "Sam Black",
@@ -77,11 +77,11 @@
     },
     {
         "name": "Owen Turtenwald",
-        "points": 18
+        "points": 21
     },
     {
         "name": "Yuuya Watanabe",
-        "points": 24
+        "points": 27
     },
     {
         "name": "Jacob Wilson",
@@ -89,10 +89,10 @@
     },
     {
         "name": "Josh Utter-Leyton",
-        "points": 15
+        "points": 18
     },
     {
         "name": "Kentarou Yamamoto",
-        "points": 24
+        "points": 27
     }
 ]
