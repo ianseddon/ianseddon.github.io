@@ -66,6 +66,12 @@
 	         return total;
 	    };
 	    
+	    $scope.scoreSort( pId ) {
+	    	return function(person) {
+	    		return $scope.totalScore(pId);
+	    	};
+	    };
+	    
 	    $scope.scoreColor = function( pId ) {
 	        var maxScore = 0;
 	        var minScore = 999;
