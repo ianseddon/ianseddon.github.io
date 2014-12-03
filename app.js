@@ -50,9 +50,12 @@ var app = angular.module('myApp', []);
 	        
 	        $http.get('data.json').then( function ( res ) {
 	        	$scope.players = res.data;
+	        	$scope.hasLoaded = true;
 	        });
 	
 	    };
+	    
+	    $scope.hasLoaded = false;
 	    
 	    $scope.loadPlayers();
 	
