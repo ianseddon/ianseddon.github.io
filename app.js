@@ -43,13 +43,9 @@ var app = angular.module('myApp', []);
 	    }
 	         
 	    $scope.loadPlayers = function() {
-	        var httpRequest = $http({
-	            method: 'POST',
-	            url: 'data.json',
-	            //data: playerData
-	
-	        }).success(function(data, status) {
-	            $scope.players = data;
+	        
+	        $http.get('data.json').then( function ( res ) {
+	        	$scope.players = res.data;
 	        });
 	
 	    };
