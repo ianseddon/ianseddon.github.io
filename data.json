@@ -1,26 +1,98 @@
-{ 
-  { name: "Shahar Shenhar", points: 15 },
-  { name: "Patrick Chapin", points: 21 },
-  { name: "Stanislav Cifka", points: 9 },
-  { name: "Lars Dam", points: 12 },
-  { name: "Jeremy Dezani", points: 6 },
-  { name: "Reid Duke", points: 6 },
-  { name: "Willy Edel", points: 9 },
-  { name: "Ivan Floch", points: 15 },
-  { name: "Yuuki Ichikawa", points: 12 },
-  { name: "William Jensen", points: 12 },
-  { name: "Lee Shi Tian", points: 3 },
-  { name: "Raphael Levy", points: 9 },
-  { name: "Tom Martell", points: 12 },
-  { name: "Shaun McLaren", points: 9 },
-  { name: "Nam Sung Wook", points: 6 },
-  { name: "Raymond Perez Jr.", points: 6 },
-  { name: "Paulo Vitor Damo da Rosa", points: 9 },
-  { name: "Paul Rietzl", points: 9 },
-  { name: "Sam Black", points: 12 },
-  { name: "Owen Turtenwald", points: 12 },
-  { name: "Yuuya Watanabe", points: 12 },
-  { name: "Jacob Wilson", points: 6 },
-  { name: "Josh Utter-Leyton", points: 15 },
-  { name: "Kentarou Yamamoto", points: 15 }
-}
+[
+    {
+        "name": "ShaharShenhar",
+        "points": 15
+    },
+    {
+        "name": "PatrickChapin",
+        "points": 21
+    },
+    {
+        "name": "StanislavCifka",
+        "points": 9
+    },
+    {
+        "name": "LarsDam",
+        "points": 12
+    },
+    {
+        "name": "JeremyDezani",
+        "points": 6
+    },
+    {
+        "name": "ReidDuke",
+        "points": 6
+    },
+    {
+        "name": "WillyEdel",
+        "points": 9
+    },
+    {
+        "name": "IvanFloch",
+        "points": 15
+    },
+    {
+        "name": "YuukiIchikawa",
+        "points": 12
+    },
+    {
+        "name": "WilliamJensen",
+        "points": 12
+    },
+    {
+        "name": "LeeShiTian",
+        "points": 3
+    },
+    {
+        "name": "RaphaelLevy",
+        "points": 9
+    },
+    {
+        "name": "TomMartell",
+        "points": 12
+    },
+    {
+        "name": "ShaunMcLaren",
+        "points": 9
+    },
+    {
+        "name": "NamSungWook",
+        "points": 6
+    },
+    {
+        "name": "RaymondPerezJr.",
+        "points": 6
+    },
+    {
+        "name": "PauloVitorDamodaRosa",
+        "points": 9
+    },
+    {
+        "name": "PaulRietzl",
+        "points": 9
+    },
+    {
+        "name": "SamBlack",
+        "points": 12
+    },
+    {
+        "name": "OwenTurtenwald",
+        "points": 12
+    },
+    {
+        "name": "YuuyaWatanabe",
+        "points": 12
+    },
+    {
+        "name": "JacobWilson",
+        "points": 6
+    },
+    {
+        "name": "JoshUtter-Leyton",
+        "points": 15
+    },
+    {
+        "name": "KentarouYamamoto",
+        "points": 15
+    }
+]
