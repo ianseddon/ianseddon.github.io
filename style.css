@@ -36,6 +36,7 @@ div.s1 {
 
 div.s2 {
     background: #4F5361;
+    color: #EEEEEE;
 }
 
 div.s3 {
@@ -88,7 +89,7 @@ MTG Specific
 }
 
 .s2 .data {
-    color: #CCCCCC;
+    color: #DDDDDD;
 }
 
 .table-wrapper {
