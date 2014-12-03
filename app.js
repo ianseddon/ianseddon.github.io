@@ -1,32 +1,7 @@
 var app = angular.module('myApp', []);
 	function PlayersCtrl($scope, $http) {
 	
-	    $scope.players = [ 
-	        { name: "Shahar Shenhar", points: 15 },          // 0
-	        { name: "Patrick Chapin", points: 21 },          // 1
-	        { name: "Stanislav Cifka", points: 9 },          // 2
-	        { name: "Lars Dam", points: 12 },                // 3
-	        { name: "Jeremy Dezani", points: 6 },            // 4
-	        { name: "Reid Duke", points: 6 },                // 5
-	        { name: "Willy Edel", points: 9 },               // 6
-	        { name: "Ivan Floch", points: 15 },              // 7
-	        { name: "Yuuki Ichikawa", points: 12 },          // 8
-	        { name: "William Jensen", points: 12 },          // 9
-	        { name: "Lee Shi Tian", points: 3 },             // 10
-	        { name: "Raphael Levy", points: 9 },             // 11
-	        { name: "Tom Martell", points: 12 },             // 12
-	        { name: "Shaun McLaren", points: 9 },            // 13
-	        { name: "Nam Sung Wook", points: 6 },            // 14
-	        { name: "Raymond Perez Jr.", points: 6 },        // 15
-	        { name: "Paulo Vitor Damo da Rosa", points: 9 }, // 16
-	        { name: "Paul Rietzl", points: 9 },              // 17
-	        { name: "Sam Black", points: 12 },               // 18
-	        { name: "Owen Turtenwald", points: 12 },         // 19
-	        { name: "Yuuya Watanabe", points: 12 },          // 20
-	        { name: "Jacob Wilson", points: 6 },             // 21
-	        { name: "Josh Utter-Leyton", points: 15 },       // 22
-	        { name: "Kentarou Yamamoto", points: 15 }        // 23
-	    ];
+	    $scope.players = [];
 	    
 	    $scope.people = [
 	        { name: "Nick",   picks: [ 7, 22, 0, 19, 20, 13, 4, 5 ] },
@@ -70,13 +45,15 @@ var app = angular.module('myApp', []);
 	    $scope.loadPlayers = function() {
 	        var httpRequest = $http({
 	            method: 'POST',
-	            url: '/echo/json/',
-	            data: playerData
+	            url: 'data.json',
+	            //data: playerData
 	
 	        }).success(function(data, status) {
 	            $scope.players = data;
 	        });
 	
 	    };
+	    
+	    $scope.loadPlayers();
 	
 	}
