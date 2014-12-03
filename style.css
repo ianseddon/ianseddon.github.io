@@ -1,6 +1,7 @@
 body {
     color: #1E2734;
     background: #FFFFFF;
+    font-family: "Lato", "Arial", sans-serif;
 }
 
 header {
@@ -65,16 +66,18 @@ MTG Specific
 
 .header {
     font-weight: bold;
+    font-size: 1.25em;
     background: #171922;
     color: #FFFFFF;
 }
 
 .header div {
-    padding: 1em;
+    padding: 0.75em;
 }
 
 .data {
-    padding: 0.1em 1em;
+    padding: 0.1em 0.75em;
+    color: #555555;
 }
 
 .table-wrapper {
