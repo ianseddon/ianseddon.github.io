@@ -83,12 +83,14 @@ MTG Specific
 }
 
 .data {
-    padding: 0.1em 0.75em;
+    padding: 0.25em 0.75em;
+    border-bottom: 1px solid #EFEFEF;
     color: #555555;
 }
 
 .s2 .data {
     color: #DDDDDD;
+    border-bottom: 1px solid #57596F;
 }
 
 .table-wrapper {
