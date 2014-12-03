@@ -60,8 +60,8 @@
 	    $scope.totalScore = function( person ) {
 	         var total = 0;
 	         var i;
-	         for( i = 0; i < $scope.people[person.id].picks.length; i++ ) {
-	             total += $scope.players[$scope.people[person.id].picks[i]].points;
+	         for( i = 0; i < person.picks.length; i++ ) {
+	             total += person.picks[i]].points;
 	         }
 	         return total;
 	    };
@@ -74,9 +74,9 @@
 	        var i;
 	        
 	        for( i = 0; i < $scope.people.length; i++ ) {
-	            if( $scope.totalScore(i) < minScore ) minScore = $scope.totalScore(i);
-	            if( $scope.totalScore(i) > maxScore ) maxScore = $scope.totalScore(i);
-	            if( i == person.id ) myScore = $scope.totalScore(i);
+	            if( $scope.totalScore(i) < minScore ) minScore = $scope.totalScore($scope.people[i].id);
+	            if( $scope.totalScore(i) > maxScore ) maxScore = $scope.totalScore($scope.people[i].id);
+	            if( $scope.people[i].id == person.id ) myScore = $scope.totalScore($scope.people[i].id);
 	        }
 	        
 	        var x = (myScore - minScore) / (maxScore - minScore);
