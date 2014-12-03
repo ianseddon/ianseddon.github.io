@@ -110,16 +110,16 @@
 	</div>
         <div ng-app="myApp">
         <div ng-controller="PlayersCtrl">
-	<table ng-repeat="person in people">
-	    <tr>
+	<div class="col-md-4" ng-repeat="person in people">
+	    <div class="row">
 	        <th>{{person.name}}</th>
 	        <th class="score" ng-style="{'background': scoreColor($index)}">{{totalScore($index)}}</th>
-	    </tr>
-	    <tr ng-repeat="pick in person.picks">
-	        <td class="name">{{players[pick].name}}</td>
-	        <td>{{players[pick].points}}</td>
-	    </tr>
-	</table>
+	    </div>
+	    <div class="row" ng-repeat="pick in person.picks">
+	        <div class="pull-left name">{{players[pick].name}}</div>
+	        <div class="pull-right">{{players[pick].points}}</div>
+	    </div>
+	</div>
 	</div>
       </div>
       </div>
