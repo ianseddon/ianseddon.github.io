@@ -16,7 +16,6 @@
   <body>
     <script>
     	var app = angular.module('myApp', []);
-
 	function PlayersCtrl($scope, $http) {
 	
 	    $scope.players = [ 
@@ -47,36 +46,38 @@
 	    ];
 	    
 	    $scope.people = [
-	        { id: 0, name: "Nick",   picks: [ 7, 22, 0, 19, 20, 13, 4, 5 ] },
-	        { id: 1, name: "Harley", picks: [ 1, 22, 19, 9, 13, 20, 4, 5 ] },
-	        { id: 2, name: "Paul",   picks: [ 1, 0, 19, 20, 13, 2, 11, 5 ] },
-	        { id: 3, name: "Kyle",   picks: [ 7, 19, 18, 12, 20, 13, 2, 5 ] },
-	        { id: 4, name: "Evan",   picks: [ 1, 7, 22, 9, 8, 17, 11, 5 ] },
-	        { id: 5, name: "Ian",    picks: [ 7, 19, 9, 8, 18, 20, 13, 11 ] },
-	        { id: 6, name: "Jesse",  picks: [ 0, 18, 20, 16, 13, 17, 11, 5 ] },
-	        { id: 7, name: "Ryan",   picks: [ 22, 23, 8, 20, 2, 14, 5, 10 ] }
+	        { name: "Nick",   picks: [ 7, 22, 0, 19, 20, 13, 4, 5 ] },
+	        { name: "Harley", picks: [ 1, 22, 19, 9, 13, 20, 4, 5 ] },
+	        { name: "Paul",   picks: [ 1, 0, 19, 20, 13, 2, 11, 5 ] },
+	        { name: "Kyle",   picks: [ 7, 19, 18, 12, 20, 13, 2, 5 ] },
+	        { name: "Evan",   picks: [ 1, 7, 22, 9, 8, 17, 11, 5 ] },
+	        { name: "Ian",    picks: [ 7, 19, 9, 8, 18, 20, 13, 11 ] },
+	        { name: "Jesse",  picks: [ 0, 18, 20, 16, 13, 17, 11, 5 ] },
+	        { name: "Ryan",   picks: [ 22, 23, 8, 20, 2, 14, 5, 10 ] }
 	    ];
 	
-	    $scope.totalScore = function( person ) {
+	    $scope.totalScore = function( pId ) {
 	         var total = 0;
 	         var i;
-	         for( i = 0; i < person.picks.length; i++ ) {
-	             total += person.picks[i].points;
+	         for( i = 0; i < $scope.people[pId].picks.length; i++ ) {
+	             total += $scope.players[$scope.people[pId].picks[i]].points;
 	         }
 	         return total;
 	    };
 	    
-	    $scope.scoreColor = function( person ) {
+	    $scope.scoreColor = function( pId ) {
 	        var maxScore = 0;
 	        var minScore = 999;
 	        var myScore;
+	        var tmp;
+	
 	        var totals = [];
 	        var i;
 	        
 	        for( i = 0; i < $scope.people.length; i++ ) {
-	            if( $scope.totalScore(i) < minScore ) minScore = $scope.totalScore($scope.people[i].id);
-	            if( $scope.totalScore(i) > maxScore ) maxScore = $scope.totalScore($scope.people[i].id);
-	            if( $scope.people[i].id == person.id ) myScore = $scope.totalScore($scope.people[i].id);
+	            if( $scope.totalScore(i) < minScore ) minScore = $scope.totalScore(i);
+	            if( $scope.totalScore(i) > maxScore ) maxScore = $scope.totalScore(i);
+	            if( i == pId ) myScore = $scope.totalScore(i);
 	        }
 	        
 	        var x = (myScore - minScore) / (maxScore - minScore);
@@ -109,11 +110,11 @@
         <div ng-app="myApp">
         <div ng-controller="PlayersCtrl">
         <div class="clearfix"></div>
-	<div class="col-md-4" ng-repeat="person in people | orderBy:totalScore">
+	<div class="col-md-4" ng-repeat="person in people">
 	<div class="table-wrapper">
 	    <div class="header clearfix">
 	        <div class="name pull-left">{{person.name}}</div>
-	        <div class="points pull-right" ng-style="{'background': scoreColor(person)}">{{totalScore(person.id)}}</div>
+	        <div class="points pull-right" ng-style="{'background': scoreColor($index)}">{{totalScore($index)}}</div>
 	    </div>
 	    <div class="data clearfix" ng-repeat="pick in person.picks" ng-class-even="'even'" ng-class-odd="'odd'">
 	        <div class="name pull-left">{{players[pick].name}}</div>
