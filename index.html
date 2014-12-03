@@ -47,14 +47,14 @@
 	    ];
 	    
 	    $scope.people = [
-	        { name: "Nick",   picks: [ 7, 22, 0, 19, 20, 13, 4, 5 ] },
-	        { name: "Harley", picks: [ 1, 22, 19, 9, 13, 20, 4, 5 ] },
-	        { name: "Paul",   picks: [ 1, 0, 19, 20, 13, 2, 11, 5 ] },
-	        { name: "Kyle",   picks: [ 7, 19, 18, 12, 20, 13, 2, 5 ] },
-	        { name: "Evan",   picks: [ 1, 7, 22, 9, 8, 17, 11, 5 ] },
-	        { name: "Ian",    picks: [ 7, 19, 9, 8, 18, 20, 13, 11 ] },
-	        { name: "Jesse",  picks: [ 0, 18, 20, 16, 13, 17, 11, 5 ] },
-	        { name: "Ryan",   picks: [ 22, 23, 8, 20, 2, 14, 5, 10 ] }
+	        { id: 0, name: "Nick",   picks: [ 7, 22, 0, 19, 20, 13, 4, 5 ] },
+	        { id: 1, name: "Harley", picks: [ 1, 22, 19, 9, 13, 20, 4, 5 ] },
+	        { id: 2, name: "Paul",   picks: [ 1, 0, 19, 20, 13, 2, 11, 5 ] },
+	        { id: 3, name: "Kyle",   picks: [ 7, 19, 18, 12, 20, 13, 2, 5 ] },
+	        { id: 4, name: "Evan",   picks: [ 1, 7, 22, 9, 8, 17, 11, 5 ] },
+	        { id: 5, name: "Ian",    picks: [ 7, 19, 9, 8, 18, 20, 13, 11 ] },
+	        { id: 6, name: "Jesse",  picks: [ 0, 18, 20, 16, 13, 17, 11, 5 ] },
+	        { id: 7, name: "Ryan",   picks: [ 22, 23, 8, 20, 2, 14, 5, 10 ] }
 	    ];
 	
 	    $scope.totalScore = function( pId ) {
@@ -67,10 +67,8 @@
 	    };
 	    
 	    $scope.scoreSort = function( pId ) {
-	    	$scope.pId = pId;
 	    	return function(person) {
-	    		console.log( "Sorting by: "+$scope.pId );
-	    		return $scope.totalScore($scope.pId);
+	    		return $scope.totalScore(person.id);
 	    	};
 	    };
 	    
