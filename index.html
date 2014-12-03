@@ -117,7 +117,7 @@
         <div ng-app="myApp">
         <div ng-controller="PlayersCtrl">
         <div class="clearfix"></div>
-	<div class="col-md-4" ng-repeat="person in people | orderBy:totalScore($index)">
+	<div class="col-md-4" ng-repeat="person in people | orderBy:scoreSort($index)">
 	<div class="table-wrapper">
 	    <div class="header clearfix">
 	        <div class="name pull-left">{{person.name}}</div>
