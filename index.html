@@ -67,10 +67,10 @@
 	    };
 	    
 	    $scope.scoreSort = function( pId ) {
+	    	$scope.pId = pId;
 	    	return function(person) {
-	    		console.log( "Sorting by: "+pId );
-	    		//return $scope.totalScore(pId);
-	    		return 0;
+	    		console.log( "Sorting by: "+$scope.pId );
+	    		return $scope.totalScore($scope.pId);
 	    	};
 	    };
 	    
