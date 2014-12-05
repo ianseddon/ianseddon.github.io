@@ -1,36 +1,74 @@
 body {
-    color: #1E2734;
+    color: rgba( 0, 0, 0, 0.87 );
     background: #E0E0E0;
-    font-family: "Lato", "Arial", sans-serif;
+	font-size: 1.6em;
+	font-weight: 300;
+    font-family: "Roboto", sans-serif;
 }
 
 header {
-    font-family: "Lato", sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    padding: 20px 30px;
-    background: #009688;
+	background: #212121;
     width: 100%;
-    min-height: 40px;
+	padding: 20px 30px;
     color: #FFF;
+	display: none;
 }
 
 header img {
     height: 40px;
 }
 
-section.hero {
-	background: #00897B;
-	height: 30em;
-	padding: 5em 0;
+span.hl {
+	color: #F44336;
+	font-weight: 300;
 }
 
-main {
-	include: .materialShadows;
-	background: #FFFFFF;
-	height: 40em;
-	.materialShadows(3);
+.hero {
+	background: #212121;
+	height: 90vh;
+	padding-top: 25vh;
+	
+	font-weight: 100;
+	color: #FFFFFF;
+}
+
+.hero-fixed {
+	position: fixed;
+	width: 100%;
+}
+
+.hero-fixed .logo {
+	background-image: url('../images/logo.png');
+	background-size: auto 100%;
+	margin: 0 auto;
+	margin-bottom: 1.5em;
+	width: 10em;
+	height: 10em;
+}
+
+@media (min-width: @screen-md-width) {
+	.hero-fixed .logo {
+		width: 8em !important;
+		height: 8em !important;
+		margin-bottom: 0 !important;
+	}
+}
+
+.hero .tagline {
+	width: 100%;
+	font-size: 3.5em;
+}
+
+.hero .sub {
+	width: 100%;
+	margin-top: 1em;
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+.s1 {
+	min-height: 80em;
+	background: #F44336;
 }
 
 footer {
@@ -39,4 +77,27 @@ footer {
 	font-weight: 600;
 	font-size: 1.1em;
     color: rgba( 0, 0, 0, 0.54 );
+}
+
+/*
+	Parallax stuff
+*/
+.parallax {
+	/* perspective: 1px;
+	overflow-x: hidden;
+	overflow-y: auto; */
+}
+
+.parallax-back {
+	transform: translateZ(-5px); /* scale(3); */
+	/* z-index: 0; */
+}
+
+.parallax-mid {
+	transform: translateZ(0px); /* scale(2); */
+	/* z-index: 2; */
+}
+
+.parallax-front {
+	/* z-index: 4; */
 }
