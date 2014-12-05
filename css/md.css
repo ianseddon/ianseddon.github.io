@@ -28,7 +28,6 @@ span.hl {
 	height: 90vh;
 	min-height: 650px;
 	padding: 0;
-	padding-top: 25vh;
 	
 	font-weight: 100;
 	color: #FFFFFF;
@@ -41,6 +40,8 @@ span.hl {
 .hero-fixed {
 	position: fixed;
 	width: 100%;
+	top: 50%;
+	margin-top: -144px;
 }
 
 .hero-fixed .logo {
