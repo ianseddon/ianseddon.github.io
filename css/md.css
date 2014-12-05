@@ -66,9 +66,9 @@ span.hl {
 }
 
 /*
-	Desktop and larger
+	Tablet and larger
 */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
 	.hero-fixed .logo {
 		width: 10em;
 		height: 10em;
