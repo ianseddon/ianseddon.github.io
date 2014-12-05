@@ -26,10 +26,16 @@ span.hl {
 .hero {
 	background: #212121;
 	height: 90vh;
+	min-height: 650px;
+	padding: 0;
 	padding-top: 25vh;
 	
 	font-weight: 100;
 	color: #FFFFFF;
+	
+	/* for z-index */
+	z-index: -1;
+	position: relative;
 }
 
 .hero-fixed {
@@ -41,7 +47,7 @@ span.hl {
 	background-image: url('../images/logo.png');
 	background-size: auto 100%;
 	margin: 0 auto;
-	margin-bottom: 1.5em;
+	/* margin-bottom: 1.5em; */
 	width: 10em;
 	height: 10em;
 }
@@ -62,7 +68,7 @@ span.hl {
 .hero .sub {
 	width: 100%;
 	margin-top: 1em;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	font-weight: 500;
 }
 
@@ -77,27 +83,4 @@ footer {
 	font-weight: 600;
 	font-size: 1.1em;
     color: rgba( 0, 0, 0, 0.54 );
-}
-
-/*
-	Parallax stuff
-*/
-.parallax {
-	/* perspective: 1px;
-	overflow-x: hidden;
-	overflow-y: auto; */
-}
-
-.parallax-back {
-	transform: translateZ(-5px); /* scale(3); */
-	/* z-index: 0; */
-}
-
-.parallax-mid {
-	transform: translateZ(0px); /* scale(2); */
-	/* z-index: 2; */
-}
-
-.parallax-front {
-	/* z-index: 4; */
 }
