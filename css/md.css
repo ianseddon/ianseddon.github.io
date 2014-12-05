@@ -82,6 +82,11 @@ span.hl {
 	}
 }
 
+paper-fab {
+	background: #EEEEEE;
+	color: #424242;
+}
+
 .s1 {
 	min-height: 80em;
 	background: #F44336;
