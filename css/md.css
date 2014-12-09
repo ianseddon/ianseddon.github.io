@@ -101,7 +101,7 @@ paper-fab.gallery-nav {
 .s1 {
 	min-height: 80em;
 	background: #F44336;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .gallery {
@@ -112,11 +112,13 @@ paper-fab.gallery-nav {
 	display: none;
 	position: absolute;
 	top: 0;
+	left: 100%;
 	width: 100%;
 }
 
 .page.active {
 	display: block;
+	left: 0;
 }
 
 .page .graphic {
