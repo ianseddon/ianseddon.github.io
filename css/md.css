@@ -101,10 +101,26 @@ paper-fab.gallery-nav {
 .s1 {
 	min-height: 80em;
 	background: #F44336;
+	overflow: hidden;
+}
+
+.gallery {
+	position: relative;
+}
+
+.page {
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.page.active {
+	display: block;
 }
 
 .page .graphic {
-	background: url('../images/banner_teamsummon.png');
+	background: url('../images/banner_teamsummon.png') no-repeat center top;
 	background-size: cover;
 	height: 500px;
 	position: relative;

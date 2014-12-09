@@ -35,9 +35,17 @@
     <script>
         Polymer({
 
-            /*ready: function () {
+            scroll: function () {
+                console.log("test");
+            },
 
-                var header = document.querySelector('sticky-header');
+            ready: function () {
+
+                this.addEventListener('scroll', function() {
+                    console.log( "test" );
+                });
+
+                /*var header = document.querySelector('sticky-header');
                 var player = header.animate([
                     {top: '-60px', opacity: 0.5},
                     {top: '0px', opacity: 1}
@@ -57,9 +65,9 @@
                     direction: 'alternate',
                     duration: 300,
                     iterations: 1
-                })
+                })*/
 
-            }*/
+            }
 
         });
     </script>
