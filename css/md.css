@@ -109,8 +109,10 @@ paper-fab.gallery-nav {
 }
 
 .about {
+	margin-top: 3em;
 	padding: 30px 40px;
 	color: #EEEEEE;
+	font-size: 1em;
 }
 
 .gallery {
@@ -122,6 +124,7 @@ paper-fab.gallery-nav {
 @media (min-width: 768px) {
 	.about {
 		padding: 50px 60px;
+		font-size: 1.25em;
 	}
 
 	.gallery {
@@ -187,10 +190,13 @@ paper-fab.gallery-nav {
 }
 
 footer {
-    /* background: #4DB6AC; */
-	margin-top: 1em;
+    background: #E0E0E0;
     padding: 3em 2em;
 	font-weight: 600;
 	font-size: 1.1em;
     color: rgba( 0, 0, 0, 0.54 );
+}
+
+footer img {
+	margin-bottom: 2em;
 }
