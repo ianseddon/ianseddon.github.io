@@ -132,18 +132,35 @@ paper-fab.gallery-nav {
 	}
 }
 
+.pagewrapper {
+	width: 300%;
+}
+
 .page {
-	position: absolute;
-	display: none;
-	top: 0;
-	left: 100%;
-	width: 100%;
+	position: relative;
+	float: left;
+	width: calc(100%/3);
+	margin-right: 15px;
+	/*display: none;*/
 }
 
 .page.active {
-	display: block;
-	left: 0;
+	margin-left: 0;
+	/*display: block;*/
 }
+
+/*.page {*/
+	/*position: absolute;*/
+	/*display: none;*/
+	/*top: 0;*/
+	/*left: 100%;*/
+	/*width: 100%;*/
+/*}*/
+
+/*.page.active {*/
+	/*display: block;*/
+	/*left: 0;*/
+/*}*/
 
 .page .graphic {
 	background-color: #212121;
