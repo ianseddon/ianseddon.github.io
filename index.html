@@ -15,16 +15,18 @@
 		<script src="components/webcomponentsjs/webcomponents.js"></script>
 		<link rel="import" href="components/polymer/polymer.html">
 		<link href="components/core-icons/core-icons.html" rel="import">
+		<link href="components/my/sticky-header.html" rel="import">
 		<link href="components/paper-fab/paper-fab.html" rel="import">
-
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
         <title>Ian Seddon</title>
     </head>
-    <body>
-		<header>
-			<img src="logo.png" alt="logo">
-		</header>
-		
+    <body unresolved>
+
+		<sticky-header style="display: none">
+
+		</sticky-header>
+
 		<section class="hero container-fluid">
 			<div class="hero-fixed">
 				<div class="logo"></div>
@@ -38,10 +40,37 @@
 			<div class="scroll-button text-center">
 				<paper-fab icon="arrow-drop-down">v</paper-fab>
 			</div>
+
+			<!-- Begin gallery pages -->
+
+			<!-- End gallery pages -->
+
 		</section>
-		
+
 		<footer class="text-center">
 			Copyright &copy; 2014 Ian Seddon 
 		</footer>
+
+		<script>
+			var target = $(".s1").offset().top,
+					timeout = null;
+
+			$(window).scroll(function () {
+				if (!timeout) {
+					timeout = setTimeout(function () {
+						console.log('scroll');
+						clearTimeout(timeout);
+						timeout = null;
+						if ($(window).scrollTop() >= target) {
+							$("sticky-header").slideDown();
+						}
+						else {
+							$("sticky-header").slideUp();
+						}
+					}, 250);
+				}
+			});
+		</script>
+
     </body>
 </html>
