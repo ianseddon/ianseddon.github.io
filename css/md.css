@@ -83,14 +83,14 @@ span.hl {
 }
 
 paper-fab.scroll-down {
-	background: #EEEEEE;
+	background: #E0E0E0;
 	color: #424242;
 	z-index: 10;
 }
 
 paper-fab.gallery-nav {
-	color: #EEEEEE;
-	background: #212121;
+	color: #424242;
+	background: #E0E0E0;
 }
 
 .overlap {
@@ -100,8 +100,8 @@ paper-fab.gallery-nav {
 
 .s1 {
 	min-height: 80em;
-	background: #F44336;
-	overflow-x: hidden;
+	background-color: #F44336;
+	transition: background-color 1s;
 }
 
 .gallery {
@@ -122,7 +122,9 @@ paper-fab.gallery-nav {
 }
 
 .page .graphic {
-	background: url('../images/banner_teamsummon.png') no-repeat center top;
+	background-color: #212121;
+	background-repeat: no-repeat;
+	background-position: center top;
 	background-size: cover;
 	height: 500px;
 	position: relative;
@@ -141,11 +143,23 @@ paper-fab.gallery-nav {
 	color: #EEE;
 }
 
+.page .description {
+	margin-top: 1em;
+	padding: 30px 40px;
+
+	color: #FFFFFF;
+	font-size: 1.25em;
+}
+
 @media (min-width: 768px) {
 	.page .graphic .title {
 		bottom: 50px;
 		left: 60px;
 		font-size: 3em;
+	}
+
+	.page .description {
+		padding: 50px 60px;
 	}
 }
 
