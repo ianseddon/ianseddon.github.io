@@ -37,12 +37,25 @@
 		</section>
 		
 		<section class="s1 container-fluid">
-			<div class="scroll-button text-center">
-				<paper-fab icon="arrow-drop-down">v</paper-fab>
+			<div class="text-center">
+				<paper-fab class="overlap scroll-down" icon="arrow-drop-down">v</paper-fab>
 			</div>
 
 			<!-- Begin gallery pages -->
+			<div class="gallery">
 
+				<div class="page">
+					<div class="row graphic">
+						<div class="title">TeamSummon</div>
+					</div>
+					<div class="text-right">
+						<paper-fab class="overlap gallery-nav" icon="chevron-right">></paper-fab>
+					</div>
+					<div class="col-md-6"></div>
+					<div class="col-md-6">
+					</div>
+				</div>
+			</div>
 			<!-- End gallery pages -->
 
 		</section>
@@ -52,7 +65,7 @@
 		</footer>
 
 		<script>
-			var target = $(".s1").offset().top,
+			var target = $(".s1").offset().top - 150,
 					timeout = null;
 
 			$(window).scroll(function () {
@@ -63,11 +76,15 @@
 						timeout = null;
 						if ($(window).scrollTop() >= target) {
 							$("sticky-header").slideDown();
+							$("paper-fab.scroll-down").fadeOut();
+							$(".hero-fixed").fadeOut();
 						}
 						else {
 							$("sticky-header").slideUp();
+							$("paper-fab.scroll-down").fadeIn();
+							$(".hero-fixed").fadeIn();
 						}
-					}, 250);
+					}, 100);
 				}
 			});
 		</script>

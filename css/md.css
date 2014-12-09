@@ -82,15 +82,45 @@ span.hl {
 	}
 }
 
-paper-fab {
+paper-fab.scroll-down {
 	background: #EEEEEE;
 	color: #424242;
+	z-index: 10;
+}
+
+paper-fab.gallery-nav {
+	color: #EEEEEE;
+	background: #212121;
+}
+
+paper-fab.overlap {
 	margin-top: -30px;
+	margin-bottom: -30px;
 }
 
 .s1 {
 	min-height: 80em;
 	background: #F44336;
+}
+
+.page .graphic {
+	background: url('../teamsummonfull.png');
+	background-size: cover;
+	height: 500px;
+	position: relative;
+}
+
+.page .graphic .title {
+	position: absolute;
+	background: rgba( 0, 0, 0, 0.54 );
+	padding: 5px 10px;
+	bottom: 50px;
+	left: 60px;
+
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 3em;
+	color: #EEE;
 }
 
 footer {
