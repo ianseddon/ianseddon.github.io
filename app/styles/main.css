@@ -1,22 +1,84 @@
 body {
-    transition: all 600ms cubic-bezier(0.23,1,.32,1);
+  font-family: "Cabin", sans-serif;
+}
 
-    display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
-    display: -moz-box;      /* OLD: Firefox (buggy) */
-    display: -ms-flexbox;   /* MID: IE 10 */
-    display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
-    display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+/* All headings in sans-serif font */
+h1, h2, h3, h4, h5 {
+  font-family: "Vollkorn", serif;
+}
 
-    font-family: "Cabin", sans-serif;
+/*
+ * Foundation overrides
+ */
+
+kbd {
+  /* Remove rounded border from keystroke */
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+
+  font-family: monospace;
+}
+
+input, textarea {
+  font-family: monospace !important;
+}
+
+
+.animated {
+  transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/*
+ * Brand Style
+ */
+.brand {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+
+  color: #000;
+  font-size: 1.5em;
+  line-height: 2.8125rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: "Cabin", sans-serif;
+}
+
+.brand > span {
+  font-weight: 700;
 }
 
 /*
  * Hero Element styles
  */
 .hero {
-    min-width: 100%;
-    height: 100%;
+  min-width: 100%;
 
+  /* TODO: Fix height jumping on mobile when address bar hides/shows */
+  height: 100%;
+
+  /* Pad all sides except bottom because of nav */
+  padding: 1rem 1rem 1rem 1rem;
+
+  /* Leave room for the sticky nav */
+  margin-bottom: -3.5rem;
+
+}
+
+  .hero .hero-wrapper {
+
+    background: url('../images/bg-mobile.png') no-repeat center center;
+    background-size: cover;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 0.5rem;
+
+    /* Flexbox for centering title */
     display: flex;
 
     -webkit-box-align: center;
@@ -31,47 +93,263 @@ body {
     -webkit-justify-content: center;
     justify-content: center;
 
-    font-family: "Vollkorn", serif;
-}
-
-.hero .tagline {
-    font-size: 2rem;
     text-align: center;
-}
+  }
 
-.hero .tagline .sub {
+  @media only screen and (min-width: 40.063em) {
+    .hero .hero-wrapper {
+      background-image: url('../images/bg.jpeg');
+    }
+  }
+
+  .hero h1 {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+  }
+
+  .hero small {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+
     margin-top: 1rem;
 
     font-family: monospace;
     font-size: 1rem;
     text-transform: lowercase;
     letter-spacing: 1px;
-}
+
+    display: none;
+  }
+
+  @media only screen and (min-width: 40.063em) {
+    .hero small {
+      font-size: 1.25rem;
+
+      display: block;
+    }
+  }
 
 /*
- * Nav Styles
+ * Sticky nav style
  */
 
-.tab-bar {
+/* Default styles, while it's over hero image */
+[data-magellan-expedition] {
+  background: none;
+
+  padding: 1rem;
+}
+
+  .nav-shim {
+    /* Text shim, fallback to solid transparent background */
+    background: rgba(0,0,0,0.5);
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.75));
+    background: -moz-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.75));
+    background: -webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.75));
+    background: -o-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.75));
+  }
+
+  .sub-nav {
+    width: 100%;
+    /* Match the foundation row max-width */
+    max-width: 62.5rem;
+    /* Center within page-width nav */
+    margin: 0 auto;
+  }
+
+    .sub-nav dd {
+      font-family: monospace;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      /* 1/3rd width with fallback to approximate value */
+      width: 33.33%;
+      width: calc(100% / 3);
+
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    .sub-nav dd:first-child {
+      text-align: left;
+    }
+
+    .sub-nav dd:last-child {
+      text-align: right;
+    }
+
+      .sub-nav dd a {
+        color: #ffffff;
+
+        /* Mobile: Make the link highlight grey */
+        -webkit-tap-highlight-color: #CCCCCC;
+      }
+
+        .sub-nav dd a:hover {
+          color: #dddddd;
+          text-decoration: underline;
+        }
+
+      .sub-nav dd.active a {
+        background: none;
+      }
+
+/* Styles for once it attaches to top */
+[data-magellan-expedition].fixed {
+  background: #ffffff;
+}
+
+  .fixed .nav-shim {
+    /* Hide text shim when fixed to top */
     background: none;
-}
+  }
 
-.tab-bar .brand {
-    color: #000;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-family: "Cabin", sans-serif;
-}
+  .fixed .sub-nav dd a {
+    color: #555555;
+  }
 
-.tab-bar .brand > span {
-    font-weight: 700;
-}
+    .fixed .sub-nav dd a:hover {
+      text-decoration: underline;
+    }
 
-.tab-bar .menu-icon {
+  .fixed .sub-nav dd.active a {
+    border-radius: 0;
+    color: #ffffff;
     background: #000000;
+  }
+
+    .fixed .sub-nav dd.active a:hover, .fixed .sub-nav dd.active a:focus {
+      background: #333333;
+    }
+
+/* Hacky fix for weird Magellan expedition cloning */
+[data-magellan-expedition-clone] { visibility:hidden; }
+
+/*
+ * Content section styles
+ */
+.content > article {
+  margin-top: 2rem;
 }
 
-.tab-bar .menu-icon span::after {
-    box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+  @media only screen and (min-width: 40.063em) {
+    .content > article {
+      margin-top: 5rem;
+    }
+  }
+
+/*
+ * Portfolio gallery styles
+ */
+
+.gallery {
+  overflow: hidden;
 }
+
+  .gallery .gallery-slide {
+    display: none;
+  }
+  .gallery .gallery-slide:first-child {
+    display: block;
+  }
+
+  .gallery .gallery-content {
+    margin-top: 1rem;
+  }
+
+  .gallery .gallery-image {
+    background: url('images/banner_teamsummon.png') no-repeat center top;
+    background-size: cover;
+    height: 200px;
+
+    /* Let the overlay be positioned absolutely inside */
+    position: relative;
+  }
+
+    .gallery .gallery-image .gallery-nav {
+      font-family: monospace;
+      font-size: 1.25rem;
+
+      width: 2.5rem;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      text-align: center;
+
+      /* Make the text not selectable */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      /* Relative to gallery-image (position: absolute set by gallery-overlay) */
+      top: 0;
+    }
+
+      .gallery .gallery-image .gallery-nav-right {
+        right: 0;
+      }
+
+      .gallery .gallery-image .gallery-nav-left {
+        left: 0;
+      }
+
+    .gallery .gallery-image h2 {
+      padding: 0 0.5rem;
+
+      font-family: monospace;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      /* Relative to gallery-image (position: absolute set by gallery-overlay) */
+      bottom: 0;
+      left: 0;
+    }
+
+    .gallery .gallery-image .gallery-overlay {
+      position: absolute;
+      margin: 1rem;
+
+      background: #FFFFFF;
+      color: #000000;
+    }
+
+  /* Medium screen gallery styles */
+  @media only screen and (min-width: 40.063em) {
+    .gallery .gallery-image {
+      height: 350px;
+    }
+
+    .gallery .gallery-image .gallery-overlay {
+      margin: 1.5rem;
+    }
+  }
+
+  /* Large screen gallery styles */
+  @media only screen and (min-width: 64.063em) {
+    .gallery .gallery-image {
+      height: 500px;
+    }
+
+    .gallery .gallery-image .gallery-overlay {
+      margin: 2rem;
+    }
+  }
+
+/*
+ * Footer styles
+ */
+footer {
+  background: #000;
+  color: #fff;
+
+  padding: 3rem 0;
+}
+
+  footer .copyright {
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 40.063em) {
+    footer .copyright {
+      text-align: right;
+    }
+  }

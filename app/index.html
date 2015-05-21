@@ -1,72 +1,340 @@
 <!doctype html>
 <html class="no-js">
 <head>
-    <meta charset="utf-8">
-    <title>Ian Seddon</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,300,200,100,500,600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+  <meta charset="utf-8">
+
+  <title>Ian Seddon | Full stack developer from Edmonton, AB</title>
+  <meta name="description" content="I'm Ian, a programmer living in Alberta, Canada. I build bridges between ideas and code."/>
+
+  <link rel="canonical" href="http://iseddon.com/" />
+  <meta property='og:locale' content='en_US'/>
+  <meta property='og:title' content='Ian Seddon | Full stack developer from Edmonton, AB'/>
+  <meta property='og:description' content="I'm Ian, a programmer living in Alberta, Canada. I build bridges between ideas and code."/>
+  <meta property='og:url' content='http://iseddon.com/'/>
+  <meta property='og:site_name' content='Ian Seddon'/>
+  <meta property='og:type' content='article'/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link href='//fonts.googleapis.com/css?family=Vollkorn:400,300,200,100,500,600' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
 </head>
-<body ng-app="portfolioApp">
+<body>
 
 <!-- Hero element -->
-<section class="hero">
-    <nav class="tab-bar">
-        <div class="tab-bar-section left">
-            Ian <span>Seddon</span>
-        </div>
-        <div class="right-small">
-            <a class="menu-icon"><span></span></a>
-        </div>
-    </nav>
+<section class="hero animated">
 
-    <div class="logo"></div>
-    <div class="tagline">
-        Turning ideas into beautiful code.
-        <div class="sub">
-            &lt;Full stack developer from Edmonton, AB/&gt;
-        </div>
+  <!-- Logo -->
+  <div class="brand">
+    Ian <span>Seddon</span>
+  </div>
+
+  <!-- Header navigation -->
+  <!--<a class="menu-icon" href="#work"><span></span></a>-->
+
+  <!-- Tagline -->
+  <div class="hero-wrapper">
+    <div>
+      <h1>
+        Building bridges between ideas & code.
+      </h1>
+      <small>
+        &lt;Full stack developer from Edmonton, AB/&gt;
+      </small>
     </div>
+  </div>
 </section>
+
+<nav data-magellan-expedition="fixed" class="animated">
+  <div class="nav-shim">
+    <dl class="sub-nav">
+      <dd data-magellan-arrival="about"><a href="#about">About Me</a></dd>
+      <dd data-magellan-arrival="work"><a href="#work">My Work</a></dd>
+      <dd data-magellan-arrival="contact"><a href="#contact">Contact Me</a></dd>
+    </dl>
+  </div>
+</nav>
 
 <!-- Content -->
-<section>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, enim a imperdiet tempor, magna nisl consequat tellus, non consequat sem felis quis nisl. Proin eget imperdiet felis, feugiat tristique metus. In nec lacus sodales, feugiat nisi vitae, cursus tortor. Mauris eget lacus justo. Donec ornare interdum tempus. Morbi enim nisi, tempor nec orci a, sagittis rutrum massa. Fusce lobortis turpis quis auctor facilisis. Proin ac mi lacinia, viverra lectus vitae, sagittis sem. Nulla facilisi. Nulla pharetra vulputate euismod. Maecenas non ligula vehicula elit malesuada aliquet.
+<div class="row content">
 
-    Maecenas gravida et orci ut tempor. Praesent in odio lorem. Cras tempor id arcu quis gravida. Etiam tristique, lacus ut hendrerit rutrum, dolor elit mollis urna, a consectetur quam nisi molestie erat. Aenean dapibus ultricies tellus, luctus convallis est dignissim in. Aliquam eget vehicula mauris. Vestibulum tempus posuere arcu sit amet pellentesque. Maecenas malesuada dui non condimentum aliquam. Ut erat turpis, suscipit et lorem at, vestibulum eleifend neque. Vestibulum at aliquam augue, ac elementum eros. Vestibulum neque nulla, porttitor vel maximus id, viverra id turpis. Praesent dictum mauris vel dolor gravida, tincidunt fringilla ex malesuada. Donec et luctus libero. Ut dolor dolor, semper condimentum bibendum et, posuere vitae est. Donec et volutpat nisi. Mauris metus velit, mollis in lorem mattis, tempor egestas nunc.
+  <!-- About Me -->
+  <article>
+    <div data-magellan-destination="about" class="medium-3 columns">
+      <h2>Hi, my name is Ian.</h2>
+    </div>
+    <div class="large-6 large-offset-3 medium-7 medium-offset-2 columns">
+      <a id="about"></a>
+      <p>I'm a web developer from Edmonton, Alberta, and I love handcrafting fluid web experiences.</p>
+      <p>I've been programming for nearly half my life now, and my philosophy has always been that the best digital experiences are the ones built with love, from the ground up.</p>
+      <p> </p>
+    </div>
+  </article>
 
-    Integer eu neque aliquam, viverra lorem non, laoreet velit. Praesent maximus lobortis condimentum. Cras egestas tempor congue. Duis urna mauris, posuere sit amet turpis eu, egestas ornare felis. Nunc eleifend velit sit amet odio egestas, eu auctor ante pellentesque. Suspendisse scelerisque bibendum iaculis. In non eros magna. Sed at ipsum tincidunt, lobortis quam a, pretium est. Suspendisse in vehicula ex, eget finibus dui. Suspendisse aliquam, ipsum sit amet luctus gravida, urna turpis facilisis ligula, in convallis arcu enim id libero. Praesent lorem ex, bibendum et urna a, lobortis euismod dolor. Pellentesque rutrum vitae velit in tincidunt.
+  <!-- My work and gallery -->
+  <article>
+    <div class="large-12 columns">
+      <h2 data-magellan-destination="work">My Work</h2>
+      <a id="work"></a>
 
-    Mauris tristique a nisi sed vulputate. Aenean quis ultrices arcu. Ut feugiat, diam vitae sollicitudin interdum, risus ex facilisis ante, non porta dolor lacus vel nibh. Nam gravida aliquam nisi nec condimentum. Fusce vestibulum hendrerit quam, quis posuere turpis maximus vel. Vivamus ultrices urna eu rhoncus mattis. Suspendisse sagittis tellus dui, ut venenatis risus tincidunt in. Nam euismod ornare lorem, aliquet tempus risus feugiat ut. Phasellus dictum feugiat lacus maximus aliquet. Pellentesque mollis venenatis libero ut maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+      <div class="gallery row">
+        <article class="gallery-slide">
+          <div class="gallery-image" style="background-image: url('images/banner_pixeldesigns.png');">
+            <a class="gallery-nav gallery-nav-right gallery-overlay">&gt;</a>
 
-    Vestibulum commodo et mauris vitae euismod. Sed et sapien non augue condimentum volutpat quis ac massa. Vivamus quis facilisis quam, ut interdum arcu. Sed ac enim eu orci iaculis euismod. Praesent finibus, orci sit amet vulputate iaculis, velit velit ornare dolor, a sollicitudin nunc est vel nisl. Etiam odio justo, luctus eu rhoncus nec, rhoncus at metus. Donec dignissim aliquet pulvinar. Phasellus gravida, tortor eget condimentum sodales, est tellus tempus orci, a tempus nibh lacus id massa. Pellentesque tempus ex ac ante fringilla elementum. Duis libero est, congue at sodales eget, bibendum ac dolor. Cras imperdiet mi leo, eu sagittis mi accumsan ullamcorper. Donec congue eget ipsum vel bibendum. Nulla vel tellus ornare, volutpat felis sit amet, ornare ante. Integer pharetra auctor felis eget aliquet
-</section>
+            <h2 class="gallery-overlay">Pixel Designs</h2>
+          </div>
+          <div class="gallery-content">
+            <div class="medium-6 columns">
+              <p>
+                I joined Pixel Designs, an Edmonton-based web design firm, in 2014 as the lead developer on their
+                first departure from business website design.
+              </p>
+              <p>
+                Google Analytics is a powerful tool for monitoring website metrics, but is difficult to digest without
+                a solid understanding of SEO techniques.
+                Many businesses have websites designed, but don't know how their content is affecting traffic
+                once we hand over the keys.
+                Our solution was to create an application that would make this information accessible and
+                tailored for each website's needs.
+              </p>
+              <p>
+                I designed a templating engine to integrate traffic metrics into customized
+                infographics for the last reporting period.
+                These templates compile the client's Google Analytics data into email reports which provide tangible
+                feedback on the effects of ad campaigns, content, and other changes.
+              </p>
+            </div>
+            <div class="medium-6 columns">
+              <p>
+                The web application is a dashboard for web developers to generate and tailor these automated
+                reports for their clients.
+                Developers can pick relevant metrics for each client, include common
+                suggestions for SEO optimization, and build these into their email templates.
+              </p>
+              <p>
+                Once a reporting schedule has been chosen, templates will be filled with Analytics data, optimized
+                for email, and automatically sent out to the developer's clients.
+              </p>
+              <p>
+                We look forward to our service launching and being available for licensing in the upcoming months.
+              </p>
+
+              <h5>Technologies used:</h5>
+              <kbd>Laravel, PHP, AngularJS, MySQL, responsive design</kbd>
+            </div>
+          </div>
+        </article>
+        <article class="gallery-slide">
+          <div class="gallery-image" style="background-image: url('images/banner_protatomonster.jpg');">
+            <a class="gallery-nav gallery-nav-left gallery-overlay">&lt;</a>
+            <a class="gallery-nav gallery-nav-right gallery-overlay">&gt;</a>
+
+            <h2 class="gallery-overlay">Protatomonster</h2>
+          </div>
+          <div class="gallery-content">
+            <div class="medium-6 columns">
+              <p>
+                Protatomonster is a YouTube channel that showcases player submitted footage of <em>League of Legends</em>.
+                After joining the team as a volunteer in 2011, our viewership grew and we were rapidly approaching one million subscribers.
+                With the increase of traffic, it became clear that a stronger web presence was needed.
+                As a result, I was offered a position as Protatomonster’s lead web developer.
+              </p>
+              <p>
+                Using a custom-written content management system, I built an entirely new website that was powerful
+                enough to support our video heavy content needs.
+                With the success of our new website, we were receiving more video submissions than we could keep up with.
+              </p>
+            </div>
+            <div class="medium-6 columns">
+              <p>
+                To combat this problem, I created a heavy-duty management application.
+                The application takes all received content, catalogues it, and distributes it to the appropriate team member.
+                Throughout this process the applicant is able to track the progress of their submission.
+              </p>
+              <p>
+                To this day, almost one hundred thousand video submissions have successfully gone through this process.
+              </p>
+
+              <h5>Technologies used:</h5>
+              <kbd>PHP, jQuery, MySQL</kbd>
+            </div>
+          </div>
+        </article>
+        <article class="gallery-slide">
+          <div class="gallery-image" style="background-image: url('images/banner_teamsummon.jpg');">
+            <a class="gallery-nav gallery-nav-left gallery-overlay">&lt;</a>
+
+            <h2 class="gallery-overlay">TeamSummon</h2>
+          </div>
+          <div class="gallery-content">
+            <div class="medium-6 columns">
+              <p>
+                TeamSummon was a third-party service created to improve and bring a social element into
+                the <em>League of Legends</em> queueing experience for players frustrated with the low average
+                quality of randomly assigned teammates in ranked ladders.
+              </p>
+              <p>
+                I developed an algorithm to form teams of compatible players, based not only on in-game
+                statistics, but also on their preferred roles and feedback from other users.
+              </p>
+              <p>
+                I designed the rich interface, and supported it with a powerful backend queueing application.
+                TeamSummon linked each player's account to a social presence through an innovative verification
+                process. This allowed players to interact beyond the game by following other players to see updates
+                on their play as well as posts they made.
+              </p>
+            </div>
+            <div class="medium-6 columns">
+              <p>
+                TeamSummon's launch was met with an overwhelming response. Over 100,000 users
+                registered for our service within a month of launch, and tens of thousands of players were matched.
+              </p>
+              <p>
+                Riot Games eventually implemented similar functionality into the official <em>League of Legends</em>
+                client in the form of the Team Builder queue, a proud proof of concept for TeamSummon.
+              </p>
+
+              <h5>Technologies used:</h5>
+              <kbd>PHP, jQuery, Redis</kbd>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </article>
+
+  <article class="large-12 columns">
+    <h2 data-magellan-destination="open-source">Open Source</h2>
+    <div class="row">
+      <div class="medium-3 columns">
+        <a id="open-source"></a>
+        <h3>See more on:</h3>
+        <div class="row">
+          <div class="small-6 small-offset-3 medium-12 medium-offset-0 columns">
+            <a href="//github.com/ianseddon">
+              <img src="images/Github_Logo.png">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="large-6 large-offset-3 medium-7 medium-offset-2 columns">
+        <p>
+          I often enjoy working on open source projects in my spare time which span a wide range of my interests.
+          Anything from website to game development, Arduino to Windows, I always have a few open source projects
+          I'm working on for fun.
+        </p>
+        <p>
+          I've featured a couple of my projects below, but more can be found on my GitHub page.
+        </p>
+      </div>
+    </div>
+
+    <h3>Daily To-Do's</h3>
+    <div class="row">
+      <div class="small-4 medium-4 large-3 columns">
+        <a href="//wow.curseforge.com/addons/dailytodos/">
+          <img src="images/banner_dailytodos.png">
+        </a>
+      </div>
+      <div class="small-8 medium-7 medium-offset-1 large-6 large-offset-3 columns">
+        <p>
+          Daily To-Do's was a <em>World of Warcraft</em> addon I created to track daily quests.
+          I originally created it for myself, but eventually I posted it online, and it gained a surprising number
+          of fans, surpassing 50,000 downloads and being featured in an
+          <a href="//www.engadget.com/2011/04/14/addon-spotlight-planning-my-day-around-daily-to-dos/">
+            Engadget article
+          </a>.
+        </p>
+        <p>
+          I continued development for as long as I played <em>World of Warcraft</em>. After cancelling my subscription
+          the project was placed in the hands of fans who had requested to update it for the new content.
+        </p>
+      </div>
+    </div>
+
+    <h3>Dark Moles</h3>
+    <div class="row">
+      <div class="small-4 medium-4 large-3 columns">
+        <a href="//github.com/ianseddon/dark-moles/">
+          <img src="images/banner_darkmoles.jpg">
+        </a>
+      </div>
+      <div class="small-8 medium-7 medium-offset-1 large-6 large-offset-3 columns">
+        <p>
+          Dark Moles was my submission for my first game jam, the Mini Ludum Dare 50.
+          I had a 48-hour deadline to create a game from scratch, and this was the end product: graphics, design
+          and gameplay all created within the time limit.
+        </p>
+        <p>
+          Dark Moles is a 2D demake of <em>Dark Souls</em> in which you can experience the repeated soul-crushing
+          defeat of Dark Souls, but instead of a titanic monster, you're fighting a giant mole (weird).
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <article class="large-12 columns">
+    <h2 data-magellan-destination="contact">Contact Me</h2>
+    <a id="contact"></a>
+
+    <div class="row">
+      <div class="medium-6 columns">
+        <p>
+          Want to ask a question, work with me, or just say hi?
+        </p>
+        I'd love to hear from you, so fill out this form and I'll get back to you as soon as possible!
+        </p>
+      </div>
+      <div class="medium-6 columns">
+        <form method="post" action="//formspree.io/ian@iseddon.com" class="contact-form">
+          <input type="hidden" name="_next" value="//iseddon.com/thanks.html" />
+          <input type="hidden" name="_gotcha" value="" />
+          <label>
+            Your email:
+            <input type="email" name="_replyto" placeholder="you@domain.com">
+          </label>
+          <label>
+            Your message:
+            <textarea name="message" placeholder="Write your message here..."></textarea>
+          </label>
+          <button class="button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </article>
+</div>
 
 <!-- Footer -->
-<!-- close the off-canvas menu -->
-<a class="exit-off-canvas"></a>
+<footer class="row">
+    <div class="medium-6 columns">
+      <ul class="inline-list left">
+        <li>
+          <a href="mailto:ian@iseddon.com" target="_blank">Email</a>
+        </li>
+        <li>
+          <a href="//github.com/ianseddon" target="_blank">Github</a>
+        </li>
+      </ul>
+    </div>
+    <div class="medium-6 columns">
+      <p class="copyright">Copyright &copy; Ian Seddon, 2015</p>
+    </div>
+</footer>
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/modernizr/modernizr.js"></script>
 <script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/fastclick/lib/fastclick.js"></script>
 <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
 <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
@@ -75,13 +343,17 @@
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/about.js"></script>
+<script src="scripts/gallery.js"></script>
+<script src="scripts/ajaxify.js"></script>
+<script src="scripts/foundation.js"></script>
 <!-- endbuild -->
 
-<script>
-    $(document).foundation();
-</script>
+<!-- Preload gallery images -->
+<div style="width: 1px; height: 1px; overflow: hidden; margin-bottom: -2px;">
+  <img src="images/banner_teamsummon.jpg" />
+  <img src="images/banner_pixeldesigns.png" />
+  <img src="images/banner_protatomonster.jpg" />
+</div>
+
 </body>
 </html>
