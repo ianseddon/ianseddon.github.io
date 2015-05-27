@@ -36,12 +36,11 @@ input, textarea {
  */
 .brand {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  top: 1.5rem;
+  left: 1.5rem;
 
   color: #000;
   font-size: 1.5em;
-  line-height: 2.8125rem;
   text-transform: uppercase;
   font-weight: 300;
   font-family: "Cabin", sans-serif;
@@ -57,26 +56,19 @@ input, textarea {
 .hero {
   min-width: 100%;
 
-  /* TODO: Fix height jumping on mobile when address bar hides/shows */
-  height: 100%;
-
-  /* Pad all sides except bottom because of nav */
-  padding: 1rem 1rem 1rem 1rem;
-
-  /* Leave room for the sticky nav */
-  margin-bottom: -3.5rem;
-
+  height: 500px;
 }
 
   .hero .hero-wrapper {
 
-    background: url('../images/bg-mobile.png') no-repeat center center;
+    background: #000000 url('../images/bg-mobile.png') no-repeat center center;
     background-size: cover;
 
     height: 100%;
     width: 100%;
 
-    padding: 0.5rem;
+    /* Gutters to ensure content doesn't get too close to edge */
+    padding: 1rem;
 
     /* Flexbox for centering title */
     display: flex;
@@ -96,18 +88,12 @@ input, textarea {
     text-align: center;
   }
 
-  @media only screen and (min-width: 40.063em) {
-    .hero .hero-wrapper {
-      background-image: url('../images/bg.jpeg');
-    }
-  }
-
   .hero h1 {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    /*text-shadow: 0 0 5px rgba(255, 255, 255, 1);*/
   }
 
   .hero small {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    /*text-shadow: 0 0 5px rgba(255, 255, 255, 1);*/
 
     margin-top: 1rem;
 
@@ -119,14 +105,6 @@ input, textarea {
     display: none;
   }
 
-  @media only screen and (min-width: 40.063em) {
-    .hero small {
-      font-size: 1.25rem;
-
-      display: block;
-    }
-  }
-
 /*
  * Sticky nav style
  */
@@ -135,7 +113,13 @@ input, textarea {
 [data-magellan-expedition] {
   background: none;
 
-  padding: 1rem;
+  margin-top: -3.25rem;
+  padding: 0;
+
+  /* Animate background color transition */
+  transition: background 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transition: background 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
   .nav-shim {
@@ -145,10 +129,13 @@ input, textarea {
     background: -moz-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.75));
     background: -webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.75));
     background: -o-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.75));
+
+    padding: 1rem;
   }
 
   .sub-nav {
     width: 100%;
+    padding: 0;
     /* Match the foundation row max-width */
     max-width: 62.5rem;
     /* Center within page-width nav */
@@ -189,13 +176,19 @@ input, textarea {
           text-decoration: underline;
         }
 
+        .sub-nav dd a:active {
+          text-decoration: none;
+        }
+
       .sub-nav dd.active a {
         background: none;
       }
 
 /* Styles for once it attaches to top */
 [data-magellan-expedition].fixed {
-  background: #ffffff;
+  background: rgba(255,255,255,0.95);
+
+  margin-top: 0;
 }
 
   .fixed .nav-shim {
@@ -218,11 +211,11 @@ input, textarea {
   }
 
     .fixed .sub-nav dd.active a:hover, .fixed .sub-nav dd.active a:focus {
-      background: #333333;
+      background: #000000;
     }
 
 /* Hacky fix for weird Magellan expedition cloning */
-[data-magellan-expedition-clone] { visibility:hidden; }
+[data-magellan-expedition-clone] { display: none; }
 
 /*
  * Content section styles
@@ -230,12 +223,6 @@ input, textarea {
 .content > article {
   margin-top: 2rem;
 }
-
-  @media only screen and (min-width: 40.063em) {
-    .content > article {
-      margin-top: 5rem;
-    }
-  }
 
 /*
  * Portfolio gallery styles
@@ -312,28 +299,6 @@ input, textarea {
       color: #000000;
     }
 
-  /* Medium screen gallery styles */
-  @media only screen and (min-width: 40.063em) {
-    .gallery .gallery-image {
-      height: 350px;
-    }
-
-    .gallery .gallery-image .gallery-overlay {
-      margin: 1.5rem;
-    }
-  }
-
-  /* Large screen gallery styles */
-  @media only screen and (min-width: 64.063em) {
-    .gallery .gallery-image {
-      height: 500px;
-    }
-
-    .gallery .gallery-image .gallery-overlay {
-      margin: 2rem;
-    }
-  }
-
 /*
  * Footer styles
  */
@@ -348,8 +313,94 @@ footer {
     text-align: center;
   }
 
-  @media only screen and (min-width: 40.063em) {
-    footer .copyright {
-      text-align: right;
-    }
+/*
+ * Medium screen styles
+ */
+@media only screen and (min-width: 40.063em) {
+
+  /*
+   * Hero element styles
+   */
+  .hero {
+    height: 700px;
   }
+
+  .hero .hero-wrapper {
+    background-image: url('../images/bg.jpeg');
+  }
+
+  .hero small {
+    font-size: 1.25rem;
+
+    display: block;
+  }
+
+  /*
+   * Content Styles
+   */
+  .content > article {
+    margin-top: 5rem;
+  }
+
+  /*
+   * Gallery Styles
+   */
+  .gallery .gallery-image {
+    height: 350px;
+  }
+
+  .gallery .gallery-image .gallery-overlay {
+    margin: 1.5rem;
+  }
+
+  /*
+   * Footer styles
+   */
+  footer .copyright {
+    text-align: right;
+  }
+}
+
+/*
+ * Large screen styles
+ */
+@media only screen and (min-width: 64.063em) {
+  /*
+   * Hero element styles
+   */
+  .brand {
+    top: 2.5rem;
+    left: 2.5rem;
+  }
+
+  .hero {
+    height: 100%;
+
+    padding: 1rem;
+  }
+
+  /*
+   * Magellan nav styles
+   */
+  [data-magellan-expedition] {
+    margin-top: -4.25rem;
+
+    padding: 0 1rem;
+  }
+
+    .nav-shim {
+      /* Account for padding on hero div */
+      padding: 1rem;
+    }
+
+  /*
+   * Gallery styles
+   */
+  .gallery .gallery-image {
+    height: 500px;
+  }
+
+  .gallery .gallery-image .gallery-overlay {
+    margin: 2rem;
+  }
+}
